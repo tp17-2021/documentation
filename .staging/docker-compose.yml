@@ -3,10 +3,10 @@ version: '3.3'
 services:
   retype:
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ..
+      dockerfile: ./.staging/Dockerfile
     restart: unless-stopped
     ports:
       - "8103:5000"
     volumes:
-      - ./:/app/
+      - ../:/app/
