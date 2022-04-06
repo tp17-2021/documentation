@@ -4,4 +4,4 @@ WORKDIR /app
 
 RUN npm install retypeapp --global
 
-CMD ["retype", "build", "/docs"]
+CMD ["retype", "build"]
