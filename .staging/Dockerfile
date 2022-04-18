@@ -6,4 +6,5 @@ RUN npm install retypeapp --global
 
 RUN retype build --override='{"url":"/docs"}'
 
-CMD ["retype", "run", "--verbose", "--host", "0.0.0.0"]
+FROM nginx:1.19-alpine
+COPY --from=build /app/.retype /usr/share/nginx/html
