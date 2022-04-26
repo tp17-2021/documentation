@@ -1,7 +1,7 @@
 # Zariadenia vo volebnej miestnosti
 Vo volebnej miestnosti sa nachádza gateway a viaceré volebné terminály pripojené na gateway ethernetovým káblom. Gateway komunikuje s jediným centrálnym serverom, vykonáva synchronizáciu hlasov.
 
-<!-- ![](/assets/images/polling_place_devices.png) -->
+![](/assets/images/polling_place_devices.png)
 
 Volebný terminál pozostáva z 22 palcovej LCD dotykovej obrazovky, na ktorej je voličovi umožnené voliť. Obrazovka je pripojená k Raspberry Pi, ktoré komunikuje s NFC čítačkou pre umožnenie autorizácie pomocou autorizačných tokenov nahraných na NFC tagoch. Ďalej komunikuje s termo-tlačiarňou, ktorá umožňuje tlač potvrdenia o voľbe.
 
