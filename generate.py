@@ -57,8 +57,8 @@ def create_pdf() -> None:
     """ Create pdf from md """
 
     os.system("markdown-enum output.md 1 output.md")
-    os.system("pandoc output.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o output.pdf")
-    os.system("rm output.md")
+    os.system("pandoc output.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
+    os.system("rm documentation.md")
 
 
 def delete_links(links) -> None:
