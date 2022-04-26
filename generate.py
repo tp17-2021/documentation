@@ -47,7 +47,7 @@ def merge_documents() -> list:
             output += text
 
 
-    with open("output.md", "w") as file:
+    with open("documentation.md", "w") as file:
         file.write(output)
 
     return links_to_detele
@@ -56,8 +56,8 @@ def merge_documents() -> list:
 def create_pdf() -> None:
     """ Create pdf from md """
 
-    os.system("markdown-enum output.md 1 output.md")
-    os.system("pandoc output.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
+    os.system("markdown-enum documentation.md 1 documentation.md")
+    os.system("pandoc documentation.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
     os.system("rm documentation.md")
 
 
