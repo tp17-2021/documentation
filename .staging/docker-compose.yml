@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  retype:
+    build:
+      context: ..
+      dockerfile: ./.staging/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8103:80"
+    volumes:
+      - ../:/app/
