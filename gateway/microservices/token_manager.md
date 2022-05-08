@@ -1,3 +1,5 @@
+# Token manager
+
 Služba je zodpovedná za generovanie, overovanie a deaktivovanie tokenov nahrávaných na NFC tagy. Služba rovnako ovláda a interaguje Token writter-om, ktorý sa stará o samostné nahranie tokenu na NFC tag.
 
 Token je generovaný pomocou `uuid` bez znakov `-`, napríklad `858c0eb798a8475dbcf67e29ddb4966e`.

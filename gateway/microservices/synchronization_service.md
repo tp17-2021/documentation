@@ -1,3 +1,5 @@
+# Synchronization service
+
 Služba je zodpovedná za sychronizáciu hlasov medzi gateway-om a serverom. Služba je implementovaná ako REST API v knižnici
 [Fast API](https://fastapi.tiangolo.com/).
 
