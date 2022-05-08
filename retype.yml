@@ -7,7 +7,9 @@ branding:
 links:
 - text: Web page
   link: https://team17-21.studenti.fiit.stuba.sk/
+  icon: globe
 - text: Github
   link: https://github.com/tp17-2021
+  icon: mark-github
 footer:
   copyright: "&copy; Copyright {{ 2022 }}. All rights reserved."

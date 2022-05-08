@@ -1,3 +1,6 @@
+---
+order: 101
+---
 # Volebný terminál
 vseobecny popis
 

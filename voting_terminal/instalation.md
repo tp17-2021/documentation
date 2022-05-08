@@ -1,3 +1,6 @@
+---
+order: 100
+---
 # Inštalácia
 vseobecny popis o rozbehnuti
 
