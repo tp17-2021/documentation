@@ -85,3 +85,197 @@ class KeyPair(BaseModel):
     g_public_key_pem: str
 ```
 Kľúčový pár je špecifický pre každú volebnú meistnosť a jeho privátnym kľúčom je dešifrovaná iba kominikácia, ktorá prichádza z tejto volebnej miestnosti. Tento krok zvyšuje bezpečnosť komunikácie.
+
+
+<h1 id="fastapi-database">Database</h1>
+
+## schema_database_schema_get
+
+<a id="opIdschema_database_schema_get"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json'
+}
+
+r = requests.get('/database/schema', headers = headers)
+
+print(r.json())
+
+```
+
+`GET /database/schema`
+
+*Schema*
+
+Get all collections from database
+
+> Example responses
+
+> 200 Response
+
+```json
+{
+  "collections": []
+}
+```
+
+<h3 id="schema_database_schema_get-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|[Collections](#schemacollections)|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## import_data_database_import_data_post
+
+<a id="opIdimport_data_database_import_data_post"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json'
+}
+
+r = requests.post('/database/import-data', headers = headers)
+
+print(r.json())
+
+```
+
+`POST /database/import-data`
+
+*Import Data*
+
+> Example responses
+
+> 200 Response
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```
+
+<h3 id="import_data_database_import_data_post-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|[Message](#schemamessage)|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## seed_data_database_seed_data_post
+
+<a id="opIdseed_data_database_seed_data_post"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json'
+}
+
+r = requests.post('/database/seed-data', params={
+  'number_of_votes': '0'
+}, headers = headers)
+
+print(r.json())
+
+```
+
+`POST /database/seed-data`
+
+*Seed Data*
+
+<h3 id="seed_data_database_seed_data_post-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|number_of_votes|query|integer|true|none|
+
+> Example responses
+
+> 200 Response
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```
+
+<h3 id="seed_data_database_seed_data_post-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|[Message](#schemamessage)|
+|422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Validation Error|[HTTPValidationError](#schemahttpvalidationerror)|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## seed_votes_database_seed_votes_post
+
+<a id="opIdseed_votes_database_seed_votes_post"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json'
+}
+
+r = requests.post('/database/seed-votes', params={
+  'number_of_votes': '0'
+}, headers = headers)
+
+print(r.json())
+
+```
+
+`POST /database/seed-votes`
+
+*Seed Votes*
+
+<h3 id="seed_votes_database_seed_votes_post-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|number_of_votes|query|integer|true|none|
+
+> Example responses
+
+> 200 Response
+
+```json
+{
+  "status": "string",
+  "message": "string"
+}
+```
+
+<h3 id="seed_votes_database_seed_votes_post-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|[Message](#schemamessage)|
+|422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Validation Error|[HTTPValidationError](#schemahttpvalidationerror)|
+
+<aside class="success">
+This operation does not require authentication
+</aside>

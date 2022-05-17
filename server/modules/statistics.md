@@ -2,7 +2,7 @@
 
 Výsledky volieb sa rátajú na serveri pomocou dát získaných z Elastic Searchu a funkcie `calcualte_winning_parties_and_seats`.
 
-Na zobrazenie výsledkov ponákame viaceré koncové body ktoré výsledky vrátia s inou agregáciou alebo vráti len ich časť aby odpoveď nebola príliš veľká.
+Na zobrazenie výsledkov ponúkame viaceré koncové body ktoré výsledky vrátia s inou agregáciou alebo vráti len ich časť aby odpoveď nebola príliš veľká.
 
 ## Distupné koncové body:
 - /elastic/get-parties-results 
