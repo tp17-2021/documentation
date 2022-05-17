@@ -2,6 +2,8 @@
 order: 100
 ---
 
+# Inštalácia
+
 ## Závislosti
 Pre spustenie docker kontajnerov je potrebné mať nainstalované technológie Docker, Docker compose.
 Pre účely vývoja ďalej odporúčame mať nainštalovaný jazyk Python, nástroj na testovanie koncových bodov ako Postman alebo Insomnia a nástroj na manipuláciu s MongoDB ako napríklad MongoDB Compass.
