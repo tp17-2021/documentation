@@ -3,7 +3,7 @@ order: 195
 ---
 # Hlasovanie
 
-Základná myšlienka hlasovania spočíva vo validácii prichádzajúceho zoznamu hlasov z gateway-u, ktorá musí prejsť niekoľkými krokmi. Samotný zoznam prichádzajúcich hlasov je zašifrovaný pomocou vlastnej knižnice *electiersa*, ktorého štruktúra je následovná:
+Základná myšlienka hlasovania spočíva vo validácii prichádzajúceho zoznamu hlasov z [gateway-u](../../gateway/synchronization_service.md), ktorá musí prejsť niekoľkými krokmi. Samotný zoznam prichádzajúcich hlasov je zašifrovaný pomocou vlastnej knižnice *electiersa*, ktorého štruktúra je následovná:
 
 ```python
 class VoteEncrypted(BaseModel):

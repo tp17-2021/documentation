@@ -2,7 +2,7 @@
 order: 199
 ---
 # Databáza
-Server používa na ukladanie dát dokumentovú databázu MongoDB. Aj keď je do MongoDB vkladať dáta s rôznymi atribútmi, používame modely jednoitlivých dátových entít, ktoré špecifikujú štruktúru objektu a definujú typy jeho atribútov. Pracujeme s nasledujúcimi kolekciami:
+Server používa na ukladanie dát dokumentovú databázu [MongoDB](https://www.mongodb.com/). Aj keď je do MongoDB vkladať dáta s rôznymi atribútmi, používame modely jednoitlivých dátových entít, ktoré špecifikujú štruktúru objektu a definujú typy jeho atribútov. Pracujeme s nasledujúcimi kolekciami:
 - votes
 - parties
 - candidates
