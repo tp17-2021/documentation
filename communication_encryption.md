@@ -1,3 +1,6 @@
+---
+order: 100
+---
 # Šifrovanie komunikácie
 
 Bezpečnosť je vo voľbách, najmä v elektronických, prakticky najdôležitejším prvkom. Porušenie integrity volieb môže viesť k zmene výsledkov a v dôsledku toho k zvoleniu nesprávnych kandidátov.
