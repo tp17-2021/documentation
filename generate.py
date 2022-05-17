@@ -46,6 +46,8 @@ def merge_documents() -> list:
             links_to_detele.extend(links)
             output += text
 
+    # remove retype order section
+    output = re.sub(r"---\n.*", "", output)
 
     with open("documentation.md", "w") as file:
         file.write(output)
@@ -58,7 +60,7 @@ def create_pdf() -> None:
 
     os.system("markdown-enum documentation.md 1 documentation.md")
     os.system("pandoc documentation.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
-    os.system("rm documentation.md")
+    # os.system("rm documentation.md")
 
 
 def delete_links(links) -> None:
