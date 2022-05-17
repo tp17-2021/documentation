@@ -9,3 +9,13 @@ Keďže naše riešenie zahŕňa iba jeden centrálny server a hlasy z gateway-o
 Všetka komunikácia medzi volebnými terminálmi a gateway-om prebieha len cez lokálnu sieť Ethernet. Okrem toho je každý odoslaný hlas šifrovaný pomocou moderných kryptografických algoritmov. Keby sa i napriek tomu útočník pokúsil pripojiť k sieti a odoslať falošný hlas, nemal by platný privátny kľúč volebného terminálu, takže jeho pokus o útok by zlyhal pri overovaní hlasu, hlas by nebol prijatý.
 
 Výmena kľúčov je najdôležitejšou súčasťou RSA šifrovania. Výmena verejných kľúčov sa vykonáva počas procesu konfigurácie gateway-a autorizovaným personálom pred voľbami. Tu môže zapríčiniť chybu iba ľudský faktor, čo sa taktisto môže stať aj pri doteraz zaužívanom spôsobe volieb.
+
+
+# tmp 2
+
+ahoj
+
+## tmp 2.1
+
+ahoj 2
+
