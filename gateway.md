@@ -10,6 +10,7 @@ Gataway sa má nachádzať na chránenom mieste a pristupovať k nemu smú iba �
 
 ## Architektúra
 popis architektury
+
 ![](/assets/images/gateway/architecture.png)
 
 ## Mikroslužby a ich smerovanie

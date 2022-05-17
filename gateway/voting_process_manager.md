@@ -603,20 +603,20 @@ Generate commission paper in pdf format encoded in base64 and store it into data
   "polling_place_id": 0,
   "participated_members": [
     {
-      "name": "Jožko Mrkvička",
+      "name": "Erik Malina",
       "agree": true
     },
     {
-      "name": "Ferko Mrkvička",
+      "name": "Ferko Jablko",
       "agree": false
     },
     {
-      "name": "Ján Mrkvička",
+      "name": "Adam Jahoda",
       "agree": true
     }
   ],
   "president": {
-    "name": "Jožko Hlavný",
+    "name": "Samo Kiwi",
     "agree": true
   }
 }
@@ -814,23 +814,22 @@ Body_register_vt_register_vt_post
   "polling_place_id": 0,
   "participated_members": [
     {
-      "name": "Jožko Mrkvička",
+      "name": "Erik Malina",
       "agree": true
     },
     {
-      "name": "Ferko Mrkvička",
+      "name": "Ferko Jablko",
       "agree": false
     },
     {
-      "name": "Ján Mrkvička",
+      "name": "Adam Jahoda",
       "agree": true
     }
   ],
   "president": {
-    "name": "Jožko Hlavný",
+    "name": "Samo Kiwi",
     "agree": true
   }
-}
 
 ```
 

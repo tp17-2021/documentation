@@ -44,10 +44,25 @@ def merge_documents() -> list:
             text, links = find_links(text)
             text = insert_code(text)
             links_to_detele.extend(links)
+            
+            if "/" in filename:
+                headers = re.findall(r"^#.*", text, flags=re.MULTILINE)
+                for header in headers:
+                    new_header = f"#{header}"
+                    # print(header, new_header)
+
+                    text = re.sub(header, new_header, text)
+
             output += text
+
+
+
+            
 
     # remove retype order section
     output = re.sub(r"---\n.*", "", output)
+
+
 
     with open("documentation.md", "w") as file:
         file.write(output)
