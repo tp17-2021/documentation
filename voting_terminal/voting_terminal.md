@@ -18,7 +18,10 @@ Ako už bolo spomenuté volebný terminál pozostáva z frontendu a backendu, pr
 
 ## Frontend
 
-Frontend volebného terminálu je implementovaný v jazyku Typescript pomocou frameworku Svetle, pričom sme pri návrhu GUI používali zaužívaný štandard ID-SK, ktorý je používaný vo všetkých štátnych aplikáciách.
+Frontend volebného terminálu je implementovaný v jazyku TypeScript pomocou frameworku Svetle. Grafické rozhranie bolo implementované podľa dizajn manuálu ID-SK, ktorý je používaný vo všetkých nových štátnych aplikáciách.
+
+Keďže frontend bude ovládaný pomocou dotykovej obrazovky, tak na zadávanie textu do poľa vyhľadávania bola pridaná softvérová klávesnica.
+
 
 ## Backend
 
@@ -48,9 +51,9 @@ Využivame aj metódu, ktorá sa spustí na začiatku životného cyklu FAST API
 
 Komunikácia s tlačiarňou je implementovaná cez knižnicu *CUPS*, ktorá bola do kontajneru doinštalovaná. Pri prvom odvolení sa tlačiareň zaregistruje na backende štandartným príkazom *lpadmin*. Pred samotnou registráciou tlačiarne je potrebné nainštalovať inštalačné skripty fungujúce ako driver od výrobcu tlačiarne. Z dôvodu, že použivame termotlačiareň EPSON TM-T20III sú drivre verejne dostupné na adrese https://download.epson-biz.com/modules/pos/index.php?page=single_soft&cid=6918&pcat=3&pid=6146 . Samotné vytlačenie hlasovacieho lístka sa potom vykoná odoslaním pdf súboru na tlač cez príkaz *lpr*.
 
-#### Komunikácia s NFC čítačkou
+#### NFC čítačka
 
-TODO
+NFC čítačka je HID zariadenie nad USB protokolom, teda funguje podobne ako klávesnica. Čítačka po priložení Mifare 1k tagu posiela scan kódy stlačení kláves, ktoré bolo potrebné prekonvertovať na ASCII znaky a nadpojiť na backend.
 
 ### Definované metódy
 
