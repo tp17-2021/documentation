@@ -1,6 +1,6 @@
 # Voting service
 
-Služba zodpovedná za overovanie tokenu prichdádzajúceho a za prijímanie hlasu z voliebného terminálu.
+Služba zodpovedná za overovanie prichdádzajúceho tokenu a za prijímanie hlasu z volebného terminálu.
 
 ## Popis API
 
