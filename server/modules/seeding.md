@@ -1,6 +1,7 @@
 ---
 order: 199
 ---
+
 # Generovanie hlasov
 Pre účely vývoja a testovania odporúčame generovať hlasy vo väčšom počte. Celý postup generovania spolu s naindexovaním prijatých hlasov dosiahnete vykonaním volaní v nasledujúcom poradí:
 1. `/database/import-data`

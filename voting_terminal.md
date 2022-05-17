@@ -1,6 +1,7 @@
 ---
 order: 150
 ---
+
 # Volebný terminál
 Volebný terminál je zariadenie s ktorým používateľ bezprostredne interaguje. Pozostáva z frontendu, s ktorým interaguje používateľ a backendu, ktorý obsluhuje požiadavky frontendu a komunikuje s periférnymi zariadeniami a gatewayom. Súčasťou volebného terminúla je aj čítačku tokenov.
 
