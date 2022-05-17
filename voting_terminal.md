@@ -41,10 +41,10 @@ Websockety sa taktiež používajú pri odosielaní volebného stavu a IDečka v
 #### Komunikácia cez API rozhranie
 
 Komunikácia cez API rozhranie je využitá primárne na odosielanie a príjmanie hlasu. Stručne špecifikované endpointy back-endu:
-*   Základný hello world enpoint na adrese - /
-*   Endpoint na prijatie hlasu od front-endu na adrese - /api/vote_generated
-*   Endpoint na prijatie tokenu na adrese - /token
-*   Endpoint na prijatie stavu volieb na drese - /api/election/state
+*   Základný hello world enpoint na adrese - `/`
+*   Endpoint na prijatie hlasu od front-endu na adrese - `/api/vote_generated`
+*   Endpoint na prijatie tokenu na adrese - `/token`
+*   Endpoint na prijatie stavu volieb na drese - `/api/election/state`
 
 Využivame aj metódu ktorá sa spustí na začiatku životného cyklu FAST API clienta, pričom táto metóda vykoná úvodné nastavenia volebného terminálu ako natiahne privátne a verejné kľúče, zaregistruje volebný terminál na gateway tým, že odošle gatewayu svoj verejný kľúč a taktiež sa vytvorí websocketové pripojenie.
 
