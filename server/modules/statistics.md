@@ -4,14 +4,14 @@ Výsledky volieb sa rátajú na serveri pomocou dát získaných z Elastic Searc
 
 Na zobrazenie výsledkov ponúkame viaceré koncové body ktoré výsledky vrátia s inou agregáciou alebo vráti len ich časť aby odpoveď nebola príliš veľká.
 
-## Distupné koncové body:
-- /elastic/get-parties-results 
+## Dostupné koncové body:
+- `/elastic/get-parties-results`
     - získanie výsledkov politických strán bez kandidátov
-- /elastic/get-party-candidate-results
+- `/elastic/get-party-candidate-results`
     - získanie výsledkov všetkých strán a kandidátov
-- /elastic/get-candidates-results
+- `/elastic/get-candidates-results`
     - získanie výsledkov všetkých kandidátov
-- /elastic/get-results-by-locality
+- `/elastic/get-results-by-locality`
     - získanie výsledkov všetkých strán a kandidátov pre určitú lokalitu
 
 ## Počítanie percent a parlamentných kresiel
