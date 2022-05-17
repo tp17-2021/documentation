@@ -7,7 +7,7 @@ FILENAMES = [
     "gateway/voting_process_manager.md",
     "gateway/voting_service.md",
     "server.md",
-    "server/instalation.md",
+    "server/installation.md",
     "server/modules/database.md",
     "server/modules/seeding.md",
     "server/modules/voting.md",
