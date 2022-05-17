@@ -33,9 +33,9 @@ Algoritmus výpočtu:
 4. Ak neboli rozdané všetky kreslá, tak sa doplnia postupne stranám v poradí podľa zostatku po celočíselonom delení republikovým číslom.
 
 
-<h1 id="fastapi-elastic-search">Elastic search</h1>
+## Popis API
 
-## setup_elastic_votes_index_elastic_setup_elastic_vote_index_post
+### setup_elastic_votes_index_elastic_setup_elastic_vote_index_post
 
 <a id="opIdsetup_elastic_votes_index_elastic_setup_elastic_vote_index_post"></a>
 
@@ -82,7 +82,7 @@ Setup elastic search. Drop index if previously used. Create new index and variab
 This operation does not require authentication
 </aside>
 
-## synchronize_votes_ES_elastic_synchronize_votes_es_post
+### synchronize_votes_ES_elastic_synchronize_votes_es_post
 
 <a id="opIdsynchronize_votes_ES_elastic_synchronize_votes_es_post"></a>
 
@@ -136,7 +136,7 @@ Batch synchronization of votes from Mongo DB to Elastic search 3 Node cluster. S
 This operation does not require authentication
 </aside>
 
-## get_parties_results_elastic_get_parties_results_post
+### get_parties_results_elastic_get_parties_results_post
 
 <a id="opIdget_parties_results_elastic_get_parties_results_post"></a>
 
@@ -196,7 +196,7 @@ null
 This operation does not require authentication
 </aside>
 
-## get_parties_with_candidates_results_elastic_get_party_candidate_results_post
+### get_parties_with_candidates_results_elastic_get_party_candidate_results_post
 
 <a id="opIdget_parties_with_candidates_results_elastic_get_party_candidate_results_post"></a>
 
@@ -256,7 +256,7 @@ null
 This operation does not require authentication
 </aside>
 
-## get_candidates_results_elastic_get_candidates_results_post
+### get_candidates_results_elastic_get_candidates_results_post
 
 <a id="opIdget_candidates_results_elastic_get_candidates_results_post"></a>
 
@@ -300,7 +300,7 @@ null
 This operation does not require authentication
 </aside>
 
-## get_resilts_by_locality_mongo_elastic_get_results_by_locality_mongo_get
+### get_resilts_by_locality_mongo_elastic_get_results_by_locality_mongo_get
 
 <a id="opIdget_resilts_by_locality_mongo_elastic_get_results_by_locality_mongo_get"></a>
 
@@ -344,7 +344,7 @@ null
 This operation does not require authentication
 </aside>
 
-## get_results_by_locality_elastic_get_results_by_locality_post
+### get_results_by_locality_elastic_get_results_by_locality_post
 
 <a id="opIdget_results_by_locality_elastic_get_results_by_locality_post"></a>
 
@@ -405,7 +405,7 @@ null
 This operation does not require authentication
 </aside>
 
-## get_elections_status_elastic_elections_status_get
+### get_elections_status_elastic_elections_status_get
 
 <a id="opIdget_elections_status_elastic_elections_status_get"></a>
 

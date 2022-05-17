@@ -27,10 +27,9 @@ Ak je validácia úspešná, spomínaný zoznam prichádzajúcich hlasov sa ulo�
 - v príchádzajúcom zozname hlasov sa nesmie nachádzať duplicitný token
 - *id* volieb musí byť totožné s tým, ktoré sa nachádza v konfiguračnom súbore *config.py*
 
+## Popis API
 
-<h1 id="fastapi-elections">Elections</h1>
-
-## vote_elections_vote_post
+### vote_elections_vote_post
 
 <a id="opIdvote_elections_vote_post"></a>
 
@@ -98,7 +97,7 @@ Process candidate's vote
 This operation does not require authentication
 </aside>
 
-## get_voting_data_elections_voting_data_get
+### get_voting_data_elections_voting_data_get
 
 <a id="opIdget_voting_data_elections_voting_data_get"></a>
 
@@ -158,7 +157,7 @@ Downlaod voting data json using command curl http://localhost:8222/elections/vot
 This operation does not require authentication
 </aside>
 
-## get_zapisnica_elections_zapisnica_get
+### get_zapisnica_elections_zapisnica_get
 
 <a id="opIdget_zapisnica_elections_zapisnica_get"></a>
 

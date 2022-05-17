@@ -87,9 +87,9 @@ class KeyPair(BaseModel):
 Kľúčový pár je špecifický pre každú volebnú meistnosť a jeho privátnym kľúčom je dešifrovaná iba kominikácia, ktorá prichádza z tejto volebnej miestnosti. Tento krok zvyšuje bezpečnosť komunikácie.
 
 
-<h1 id="fastapi-database">Database</h1>
+## Popis API
 
-## schema_database_schema_get
+### schema_database_schema_get
 
 <a id="opIdschema_database_schema_get"></a>
 
@@ -133,7 +133,7 @@ Get all collections from database
 This operation does not require authentication
 </aside>
 
-## import_data_database_import_data_post
+### import_data_database_import_data_post
 
 <a id="opIdimport_data_database_import_data_post"></a>
 
@@ -176,7 +176,7 @@ print(r.json())
 This operation does not require authentication
 </aside>
 
-## seed_data_database_seed_data_post
+### seed_data_database_seed_data_post
 
 <a id="opIdseed_data_database_seed_data_post"></a>
 
@@ -228,7 +228,7 @@ print(r.json())
 This operation does not require authentication
 </aside>
 
-## seed_votes_database_seed_votes_post
+### seed_votes_database_seed_votes_post
 
 <a id="opIdseed_votes_database_seed_votes_post"></a>
 
