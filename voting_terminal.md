@@ -8,7 +8,7 @@ Volebný terminál je zariadenie s ktorým používateľ bezprostredne interaguj
 
 Hardwérové zapojenie volebného terminálu možno vidieť na nasledujúcom obrázku, pričom na obrázku je zobrazená aj architektúra gatewaya s ktorým volebný terminál komunikuje, čo je jednou z hlavných funkcionalít backendu volebného terminálu.
 
-![](/assets/images/vt/vt_devices.png)
+![](/assets/images/voting-place-architecture.png)
 
 Z obrázku vidíme, že dotyková obrazovka s ktorou interaguje používateľ je prepojená s RPi, ktorá predstavuje základné výpočtové zariadenie celého backendu. Spojenie je vytvorené cez rozhranie HDMI. Ďalej ku backendovému RPI je napojená tlačiareň pomocou sieťového kábla a čítačka NFC tagov, ktorá komunikuje s backendom cez USB rozhranie. RPi je napojené do routra volebnej miestnosti pomocou sieťového ethernetového kábla s ktorým rovnakým spôsobom komunikuje aj gateway.
 
