@@ -49,20 +49,14 @@ def merge_documents() -> list:
                 headers = re.findall(r"^#.*", text, flags=re.MULTILINE)
                 for header in headers:
                     new_header = f"#{header}"
-                    # print(header, new_header)
-
                     text = re.sub(header, new_header, text)
 
             output += text
 
 
 
-            
-
     # remove retype order section
     output = re.sub(r"---\n.*", "", output)
-
-
 
     with open("documentation.md", "w") as file:
         file.write(output)
@@ -74,8 +68,22 @@ def create_pdf() -> None:
     """ Create pdf from md """
 
     os.system("markdown-enum documentation.md 1 documentation.md")
-    os.system("pandoc documentation.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
-    # os.system("rm documentation.md")
+
+    output = ""
+    with open("documentation.md") as file:
+        text = file.read()
+        headers = re.findall(r"^#.*", text, flags=re.MULTILINE)
+        for header in headers:
+            if header.count("#") == 4:
+                new_header = re.sub(r"\d.", "", header)
+                text = re.sub(header, new_header, text)
+        output = text
+
+    with open("documentation.md", "w") as file:
+        file.write(output)
+
+    os.system("pandoc --toc documentation.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
+    os.system("rm documentation.md")
 
 
 def delete_links(links) -> None:

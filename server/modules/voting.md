@@ -62,8 +62,8 @@ Process candidate's vote
   "polling_place_id": 0,
   "votes": [
     {
-      "encrypted_message": "36AMNvcpAWdHAXKCSWexgyjxrt7xeWwhOf+oUMBqip/C051EZWlN4N4x3hVPwwIQh/l78suUNYYYQBTkERPkuaZ40D1NV4LM7nb+DHcQ0nzGIFxHND3CIDkT9UOi1AmrqrCtyVMpDP1SI/2glHjbMsrw9VowA3L8hbf3U4wSF65ocF5IxN8mrOraXUopMcu+GgFKjBh3Y56yhZfxwr7go2YvQwph1HuLYVkkBi3ZAk+1DHCuQ+oQC3ivVJPF6SBOHPJIgLGM5NUsJwq5MUWSgxlr+iQI/g/uWbjkcS7M9uBZE6+QRTD++6sqZhHxc8RTLVtqAmrp0m1We6kf/Nrx7KdqagpHQz1vgZEf50L+kVgXf9PnX1THB7U+jVB0ogvM1fmZ+JvWURHt9ZhgdO1wZvzigQP6jTNZw5amzga2T+6/KwC47dxdnnT/l/fSBXzgAbsCNWCegJfTakvpsCNjWRlPKIvbPcGEIZDKBaMTz/zhKHqTgQV/f3qmlHgq+GYVPsyl95NVBFiiYwWxYWvJIl8RCREfx39t2bAx74YsJ4fT8G3u438l6BvT5DMrEbN3YlAS7gwuRt4j3AQUWmyzHesIW1o/pJd+5IpNYQ3ld6363iu5G4mC00lnImnSig==",
-      "encrypted_object": "lb5B/LAg2/38mot9jYzRpa9O6YwrXDilpspPrGrnTKKYUXVfQ9JhW5JIGoP6FuQBXM2XzlcXkb90/VDK6+h/HeJKEUf81h/A/KiN4AZVBtRoHXOpq1gyRpFk7q5dhHzniStAPZOLruNtrAYmOoUNq3hmHLxs2KnRTMZiEc9kOefIS1vjPKFAClNCqKL++7orwvRPWGzmLMPbq6DFc/Sb7hXVlBMiUCmS2iMtz9mgs9IXheCqvcGYZQZOubFK3zjtqOvFEjuGACUZkuGbmxHEFgbBMCUPXOH933aP8eNY33+UIKSc2DSNKTOOySJNi3EolJmUhbQT5NIWXf9lE3jqXg=="
+      "encrypted_message": "36AMNvcpAWdHAXKCSWexgyjxrt7xeWwhOf+oUMBqip/C051...",
+      "encrypted_object": "lb5B/LAg2/38mot9jYzRpa9O6YwrXDilpspPrGrnTKKYUXS8..."
     }
   ]
 }
