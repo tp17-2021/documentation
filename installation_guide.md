@@ -61,7 +61,7 @@ docker compose up -d --build
 
 Server by mal byť dostupný na [http://localhost:8222/](http://localhost:8222/). Overte cez [http://localhost:8222/docs](http://localhost:8222/docs)
 
-[Viac tu](server/installation.md)
+[Viac tu](../server/installation)
 
 
 ### Gateway
@@ -85,10 +85,12 @@ Jeho služby sú ale až na subpathoch:
 | _config.json_ | `localhost:8080/statevector/config/config.json` |
 | _datamodels.yaml_ | `localhost:8080/statevector/config/datamodels.yaml` |
 
-[Viac tu](gateway/installation.md)
+[Viac tu](../gateway/installation)
 
 
 ### Volebný terminál
+
+__Pozor: Aby sa VT dokázal zaregistrovať a spustiť, je potrebná na Gateway v adminovi v ťasti volebné terminály spustiť registráciu volebných terminálov. (PIN je defaultne 0000)__
 
 ```
 docker-compose up -d --build
@@ -96,5 +98,5 @@ docker-compose up -d --build
 
 Volebný terminál by mal byť dostupný na [http://localhost:81/](http://localhost:81/)
 
-[Viac tu](voting_terminal/installation.md)
+[Viac tu](../voting_terminal/installation)
 
