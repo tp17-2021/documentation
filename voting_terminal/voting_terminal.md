@@ -103,14 +103,379 @@ Tento súbor obsahuje triedu ktorá predstavuje špecifikáciu volebného lístk
 
 **__init__(data: dict)** je metóda ktorá uloži zvolený hlas do triedy. Táto metóda je konštruktorom triedy.
 
-### API
+## API
+
+### hello__get
+
+<a id="opIdhello__get"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Accept': 'application/json'
+}
+
+r = requests.get('/backend/', headers = headers)
+
+print(r.json())
+
+```
+
+`GET /`
+
+*Hello*
+
+Sample testing endpoint 
+
+> Example responses
+
+> 200 Response
+
+```json
+null
+```
+
+<h3 id="hello__get-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|Inline|
+
+<h3 id="hello__get-responseschema">Response Schema</h3>
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+### vote_api_vote_generated_post
+
+<a id="opIdvote_api_vote_generated_post"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+r = requests.post('/backend/api/vote_generated', headers = headers)
+
+print(r.json())
+
+```
+
+`POST /api/vote_generated`
+
+*Vote*
+
+Api method for recieving vote from fronend
+
+Keyword arguments:
+vote -- vote object that user created in his action
+
+> Body parameter
+
+```json
+{
+  "party_id": 0,
+  "candidate_ids": [
+    0
+  ]
+}
+```
+
+<h3 id="vote_api_vote_generated_post-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[VotePartial](#schemavotepartial)|true|none|
+
+> Example responses
+
+> 200 Response
+
+```json
+null
+```
+
+<h3 id="vote_api_vote_generated_post-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|Inline|
+|422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Validation Error|[HTTPValidationError](#schemahttpvalidationerror)|
+
+<h3 id="vote_api_vote_generated_post-responseschema">Response Schema</h3>
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+### token_post
+
+<a id="opIdtoken_token_post"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+r = requests.post('/backend/token', headers = headers)
+
+print(r.json())
+
+```
+
+`POST /token`
+
+*Token*
+
+Api method for recieving token from client
+
+Keyword arguments:
+token -- token that voter user
+
+> Body parameter
+
+```json
+"string"
+```
+
+<h3 id="token_token_post-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|string|true|none|
+
+> Example responses
+
+> 200 Response
+
+```json
+null
+```
+
+<h3 id="token_token_post-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|Inline|
+|422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Validation Error|[HTTPValidationError](#schemahttpvalidationerror)|
+
+<h3 id="token_token_post-responseschema">Response Schema</h3>
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+### receive_current_election_state_from_gateway_post
+
+<a id="opIdreceive_current_election_state_from_gateway_post"></a>
+
+> Code samples
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+r = requests.post('/backend/api/election/state', headers = headers)
+
+print(r.json())
+
+```
+
+`POST /api/election/state`
+
+*Receive Current Election State From Gateway*
+
+Method for receiving current election state from gateway
+
+Keyword arguments:
+state -- current election state
+
+> Body parameter
+
+```json
+{}
+```
+
+<h3 id="receive_current_election_state_from_gateway-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|object|true|none|
+
+> Example responses
+
+> 200 Response
+
+```json
+null
+```
+
+<h3 id="receive_current_election_state_from_gateway-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|Inline|
+|422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Validation Error|[HTTPValidationError](#schemahttpvalidationerror)|
+
+<h3 id="receive_current_election_state_from_gateway-responseschema">Response Schema</h3>
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## API Schemas
+
+<h2 id="tocS_HTTPValidationError">HTTPValidationError</h2>
+<!-- backwards compatibility -->
+<a id="schemahttpvalidationerror"></a>
+<a id="schema_HTTPValidationError"></a>
+<a id="tocShttpvalidationerror"></a>
+<a id="tocshttpvalidationerror"></a>
+
+```json
+{
+  "detail": [
+    {
+      "loc": [
+        "string"
+      ],
+      "msg": "string",
+      "type": "string"
+    }
+  ]
+}
+
+```
+
+HTTPValidationError
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|detail|[[ValidationError](#schemavalidationerror)]|false|none|none|
+
+<h2 id="tocS_ValidationError">ValidationError</h2>
+<!-- backwards compatibility -->
+<a id="schemavalidationerror"></a>
+<a id="schema_ValidationError"></a>
+<a id="tocSvalidationerror"></a>
+<a id="tocsvalidationerror"></a>
+
+```json
+{
+  "loc": [
+    "string"
+  ],
+  "msg": "string",
+  "type": "string"
+}
+
+```
+
+ValidationError
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|loc|[string]|true|none|none|
+|msg|string|true|none|none|
+|type|string|true|none|none|
+
+<h2 id="tocS_VotePartial">VotePartial</h2>
+<!-- backwards compatibility -->
+<a id="schemavotepartial"></a>
+<a id="schema_VotePartial"></a>
+<a id="tocSvotepartial"></a>
+<a id="tocsvotepartial"></a>
+
+```json
+{
+  "party_id": 0,
+  "candidate_ids": [
+    0
+  ]
+}
+
+```
+
+VotePartial
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|party_id|integer|false|none|none|
+|candidate_ids|[integer]|false|none|none|
 
 
 
+# Dátová štruktúra
 
+## Štruktúra hlasu odoslaného z frontendu
 
+Po odvolení sa odošle z frontendu hlas na backend v tejto forme:
 
+```yaml
+VotePartial:
+      type: object
+      properties:
+        party_id:
+          type: integer
+        candidate_ids:
+          type: array
+          items:
+            type: integer
+          maxItems: 5
+```
 
+## Štruktúra hlasu spracovaného pred tlačou
+Na backende sa spracuje daný hlas vo forme slovníka. Pred tlačou je hlas transformovaný do inej podoby vďaka configuračnému súboru pre celé voľby, pričom sa *party_id* z hlasu páruje ku *_id* pre stranu v konfiguračnom súbore. Vďaka tomuto napárovaniu sa vytiahne z kofiguračného súboru meno volenej strany. Rovnakým spôsobom sa vytiahne pre každý prvok z poľa *candidate_ids* meno kandidáta. Výsledná dátová štruktúra ktorá sa posiela do funkcie na tvorbu PDFka pred tlačou vyzerá nasledovne:
 
+```json
+{
+    "token": "valid",
+    "vote": {
+        "title": "Voľby do národnej rady",
+        "candidates": ["2. Andrej Trnovec"],
+        "party": "Slovenská ľudová strana Andreja Hlinku"
+    }
+}
+```
+
+## Štruktúra hlasu odoslaného na uloženie na gateway
+Súčasťou životného cyklu hlasu je aj odoslanie a uloženie na gatewayi. Formát finálneho hlasu odoslaného a uloženého na gateway je nasledovný:
+
+```yaml
+Vote:
+    allOf:
+    - $ref: '#/components/schemas/VotePartial'
+    - type: object  
+        required:
+        - election_id
+        - token
+        properties:
+        token:
+            type: string
+        election_id:
+            type: string
+```
+
+Pričom *election_id* je idečko volieb ktoré sa práve odohrávajú.
 
 
