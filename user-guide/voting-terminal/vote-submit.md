@@ -2,6 +2,8 @@
 order: 80
 ---
 
+# Potvrdenie voľby
+
 Pred finálnym odoslaním hlasu aplikácia zobrazí používateľovi prehľad zvolenej jeho hlasu, zvolenej politickej strany a kandidátov na poslancov. Ak chce používateľ zmeniť svoje rozhodnutia, môže sa vrátiť späť na hlasovanie stlačením tlačidla "Odoslať hlas". V opačnom prípade skontroluje svoju voľbu a odošle hlas stlačením tlačidla "Odoslať hlas".
 ![](/assets/images/user_guide/voting_terminal/final_submit.png)
 

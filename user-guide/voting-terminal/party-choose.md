@@ -2,6 +2,8 @@
 order: 100
 ---
 
+# Výber politickej strany
+
 Po úspešnej autorizácii je používateľ presmerovaný na stránku obsahujúcu zoznam kandidujúcich politických strán.
 
 Po jednotlivých stránkach zoznamu kandidujúcich strán sa môže používateľ pohybovať pomocou tlačidiel prítomných v spodnej časti obrazovky. Pre rýchlejšie nájdenie preferovanej strany môže používateľ tiež použiť vyhľadávanie, do ktorého stačí jednoducho napísať kľúčové slovo.

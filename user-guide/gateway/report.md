@@ -2,6 +2,8 @@
 order: 60
 ---
 
+# Zápisnica
+
 Po kliknutí na tlačidlo "Zápisnica" na domovskej stránke môže používateľ vygenerovať zápisnicu z volieb. Najprv je však potrebné zadať mená členov volebnej komisie, ak ešte neboli uvedené.
 ![](/assets/images/user_guide/gateway/report1.png)
 

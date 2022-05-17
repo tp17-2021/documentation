@@ -1,3 +1,5 @@
+# Volebný terminál
+
 Používateľské rozhranie volebnej aplikácie je určené pre občanov, ktorý pomocou neho môžu zahlasovať vo voľbách.
 
 ## Autorizácia
