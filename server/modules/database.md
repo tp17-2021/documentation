@@ -17,7 +17,7 @@ class Vote(BaseModel):
     election_id: str
     candidate_ids: List[int] = []
 ```
-Dátová štruktúra hlasu obsahuje referenciu na . Ďalej sa počas spracovania hlasov dynamicky pridajú dva atribúty a to:
+Ďalej sa počas spracovania hlasov dynamicky pridajú dva atribúty a to:
 
 ```python
 polling_place_id: int
