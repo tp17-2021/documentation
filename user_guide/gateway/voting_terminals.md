@@ -2,6 +2,8 @@
 order: 70
 ---
 
+# Volebné terminály
+
 Po kliknutí na tlačidlo "Volebné terminály" na domovskej stránke je umožnené používateľovi vidieť aktuálny stav registrácie volebných terminálov. Ak registrácia ešte nebola spustená, používateľ ju môže spustiť kliknutím na tlačidlo "Spustiť registráciu".
 ![](/assets/images/user_guide/gateway/terminals_off.png)
 

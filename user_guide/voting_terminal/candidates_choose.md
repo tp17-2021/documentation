@@ -2,6 +2,8 @@
 order: 90
 ---
 
+# Výber kandidátov na poslancov
+
 Používateľovi aplikácia zobrazí zoznam kandidátov na poslancov. V ľavom hornom rohu sa nachádza tlačidlo "Späť" na kotré môže používateľ kliknúť v prípade, že sa chce vrátiť na voľbu kandidujúcej strany. Pod tlačidlom "Späť" sa nachádza informácia, koľko kandidátov môže používateľ zvoliť.
 
 ![](/assets/images/user_guide/voting_terminal/candidates_list.png)
