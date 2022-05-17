@@ -1,5 +1,20 @@
 # State vector
 
+Služba zodpovedná za udržiavanie aktuálneho stavu gateway-u.
+
+Udržuje tieto stavy:
+- `state_election` - stav volieb
+- `state_write` - stav zapisovačky
+- `state_register_terminals` - stav registrácie terminálov
+- `office_id` - id volebnej miestnosti
+- `pin` - pin kód k GUI aplikácii na gataway-i
+- `server_key` - verejný kľúč servera
+- `server_address` - adresa servera
+
+## Konfiguračný súbor
+
+Konfiguračný súbor obsahuje celú konfiguráciu volieb pre konkrétnu volebnú miestnosť. Je dostupný ako statický súbor na adrese `/statevector/config/config.json` pomocou Nginx.
+
 
 ## Popis API
 

@@ -1,5 +1,4 @@
-# Zapisovateľ NFC tagov
-## Služba token_writer
+# Token writer
 
 Služba zodpovedná za zapisovanie tokenu na Mifare 1k tag.
 
