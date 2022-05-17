@@ -3,27 +3,27 @@ order: 195
 ---
 # Hlasovanie
 
-Základná myšlienka hlasovania spočíva vo validácii prichádzajúceho zoznamu hlasov z gateway-u. 
+Základná myšlienka hlasovania spočíva vo validácii prichádzajúceho zoznamu hlasov z gateway-u, ktorá musí prejsť niekoľkými krokmi. Samotný zoznam prichádzajúcich hlasov je zašifrovaný pomocou vlastnej knižnice *electiersa*, ktorého štruktúra je následovná:
 
+```python
+class VoteEncrypted(BaseModel):
+    encrypted_message: str
+    encrypted_object: str
 
+class VotesEncrypted(BaseModel):
+    polling_place_id: int
+    votes: List[VoteEncrypted] = []
+```
 
- a jeho následného uloženia do databázy. Prichádzajúci hlas musí prejsť niekoľkými validačnými krokmi, ktorými sú:
-- validácia id volebnej miestnosti
-- validácia samotného šifrovania
-- validácia počtu kandidátov
-- validácia duplicitných kandidátov
-- validácia nezadanej politickej strany
-- validácia nevhodného kandidáta pre politickú stranu
-- validácia duplicitnej kombinácie tokenu a id politickej strany
-- validácia duplicitných tokenov v zozname
-- validácia id volieb
+Ak je validácia úspešná, spomínaný zoznam prichádzajúcich hlasov sa uloží do kolekcie *votes* a informuje používateľa. V opačnom prípade, server vráti špecifickú hlášku, vďaka ktorej používateľ bude vedieť, v akom kroku bola validácia neúspešná. 
 
+## Validácia
+- *id* volebnej miestnosti sa musí nachádzať v kolekcii *key_pair*
+- počet kandidátov nesmie byť väčší ako 5
+- každý kandidát sa v prichádzajúcom hlase môže vyskytovať iba raz
+- nezadaná politická strana nesmie obsahovať žiadneho kandidáta
+- kandidát musí patriť do správne politickej strany
+- v kolekcii *votes* sa nesmie nachádzať duplitcitná kombinácia tokenu a *id* volebnej miestnosti
+- v príchádzajúcom zozname hlasov sa nesmie nachádzať duplicitný token
+- *id* volieb musí byť totožné s tým, ktoré sa nachádza v konfiguračnom súbore *config.py*
 
-
-todo
-- na co sluzi hlasovanie
-- aka je zivotnost hlasu - flow
-- ako hlas vyzera
-- co sa s nim robi, cez ake vsetky validacie musi prejst
-- co sa robi / ako vyzera hlas v pripade, ze padne na nejake validacii
-- co sa robi / ako vyzera hlas v pripade ze hlas prejde na validacii
