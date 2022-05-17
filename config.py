@@ -1,6 +1,9 @@
 FILENAMES = [
-    "zariadenia_vo_volebnej_miestnosti.md",
-    "šifrovanie_komunikácie.md",
-    "gateway/mikroslužby/state_vector.md",
-    "gateway/mikroslužby/voting_service.md"
+    "server.md",
+    # "server/instalation.md",
+    # "server/modules/database.md",
+    # "server/modules/seeding.md",
+    # "server/modules/voting.md",
+    # "server/modules/encryption.md",
+    # "server/modules/statistics.md",
 ]
