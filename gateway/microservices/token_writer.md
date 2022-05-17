@@ -4,7 +4,7 @@
 Služba zodpovedná za zapisovanie tokenu na Mifare 1k tag.
 
 Zapisovanie funguje nasledovne:
-- zapisovačka čaká, pokým sa Mifare tag priblíži k zapisovačke
+- zapisovačka čaká, pokým sa Mifare tag nachádza v dosahu zapisovačky
 - prečíta zo štvrtého bloku zapísané 128-bitové číslo
 - pošle požiadavku na token manager na deaktiváciu prečítaného čísla
 - pošle požiadavku na token manager na vygenerovanie nového 128-bitového čísla
