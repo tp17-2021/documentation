@@ -40,7 +40,10 @@ Simple hello message.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="root__get-responses">Responses</h3>
@@ -84,7 +87,10 @@ Returns necessary config fields for gateway from config.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "texts": {}
+}
 ```
 
 <h3 id="election_config_election_config_get-responses">Responses</h3>
@@ -129,7 +135,13 @@ Returns necessary staus information of connected voting terminals.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "registration_status": false,
+  "terminals": [
+
+  ]
+}
 ```
 
 <h3 id="terminals_status_terminals_status_get-responses">Responses</h3>
@@ -285,7 +297,9 @@ Starts elections and notify all voting terminals.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+}
 ```
 
 <h3 id="start_voting_process_start_post-responses">Responses</h3>
@@ -331,7 +345,9 @@ Stops elections and notify all voting terminals.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+}
 ```
 
 <h3 id="end_voting_process_end_post-responses">Responses</h3>
@@ -438,7 +454,10 @@ Get all elections events of start and end of elections.
 > 200 Response
 
 ```json
-null
+{
+  "status": "success",
+  "events": []
+}
 ```
 
 <h3 id="gateway_events_gateway_elections_events_get-responses">Responses</h3>
@@ -484,7 +503,10 @@ Get first start of elections.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "first_start": {}
+}
 ```
 
 <h3 id="get_first_start_gateway_elections_events_first_start_get-responses">Responses</h3>
@@ -530,7 +552,10 @@ Get last end of elections.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "last_end": {}
+}
 ```
 
 <h3 id="get_last_end_gateway_elections_events_last_end_get-responses">Responses</h3>
@@ -578,20 +603,20 @@ Generate commission paper in pdf format encoded in base64 and store it into data
   "polling_place_id": 0,
   "participated_members": [
     {
-      "name": "Jo�ko Mrkvi�ka",
+      "name": "Jožko Mrkvička",
       "agree": true
     },
     {
-      "name": "Ferko Mrkvi�ka",
+      "name": "Ferko Mrkvička",
       "agree": false
     },
     {
-      "name": "J�n Mrkvi�ka",
+      "name": "Ján Mrkvička",
       "agree": true
     }
   ],
   "president": {
-    "name": "Jo�ko Hlavn�",
+    "name": "Jožko Hlavný",
     "agree": true
   }
 }
@@ -608,7 +633,10 @@ Generate commission paper in pdf format encoded in base64 and store it into data
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="generate_commission_paper_commission_paper_generate_post-responses">Responses</h3>
@@ -653,7 +681,10 @@ Get commission paper from database encoded in base64.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "data": "string"
+}
 ```
 
 <h3 id="get_commission_paper_commission_paper_get-responses">Responses</h3>
@@ -697,7 +728,10 @@ Send commission paper to server.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="send_commission_paper_commission_paper_send_post-responses">Responses</h3>

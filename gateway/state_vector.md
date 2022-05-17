@@ -47,7 +47,9 @@ Sample testing endpoint
 > 200 Response
 
 ```json
-null
+{
+  "message": "string"
+}
 ```
 
 <h3 id="hello__get-responses">Responses</h3>

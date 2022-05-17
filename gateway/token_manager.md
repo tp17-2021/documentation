@@ -44,7 +44,10 @@ Simple hello message.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="root__get-responses">Responses</h3>
@@ -89,7 +92,10 @@ machine's LED will turn on and be able to write data to NFC tokens.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="activate_state_tokens_writer_activate_post-responses">Responses</h3>
@@ -133,7 +139,10 @@ Deactivate NFC writer machine. Led on machine will turn off.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="deactivate_state_tokens_writer_deactivate_post-responses">Responses</h3>
@@ -192,7 +201,10 @@ Delete unwritten NFC tokens from database.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="delete_unwritten_tokens_writer_delete_post-responses">Responses</h3>
@@ -252,7 +264,10 @@ Update NFC token state from unwritten to written.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h3 id="update_written_tokens_writer_update_post-responses">Responses</h3>
@@ -297,7 +312,10 @@ Generates new token and returns it.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "token": "string"
+}
 ```
 
 <h3 id="create_token_tokens_create_post-responses">Responses</h3>

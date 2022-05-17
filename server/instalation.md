@@ -5,7 +5,7 @@ order: 100
 # Inštalácia
 
 ## Závislosti
-Pre spustenie docker kontajnerov je potrebné mať nainstalované technológie Docker, Docker compose.
+Pre spustenie docker kontajnerov je potrebné mať nainštalované technológie Docker, Docker compose.
 Pre účely vývoja ďalej odporúčame mať nainštalovaný jazyk Python, nástroj na testovanie koncových bodov ako Postman alebo Insomnia a nástroj na manipuláciu s MongoDB ako napríklad MongoDB Compass.
 
 Knižnice pythonu su definované v textovom súbore requirements.txt, ktoré si nainštalujete príkazom: 
@@ -25,10 +25,10 @@ Zobrazenie všetkých dostupných koncových bodov servera navštívte adresu ``
 
 ## Ako si naimportovať skúšobné dáta a pripraviť Elastic Search cluster
 V API docs špecifikácii spustite volania na jednotlivé koncové body v nasledovnom poradí:
-1. /database/import-data
-2. /database/seed-votes (s počtom hlasov, ktoré sa majú vygenerovať)
-3. /elastic/setup-elastic-vote-index (Elastic uzly musia byť pred týmto volaním funkčné, ak nie sú, skontrolujte prosím sekciu týkajúcu sa problému s malou pamäťou dockera.)
-4. /elastic/synchronize-votes-es (Synchronize votes in batches)
+1. `/database/import-data`
+2. `/database/seed-votes` (s počtom hlasov, ktoré sa majú vygenerovať)
+3. `/elastic/setup-elastic-vote-index` (Elastic uzly musia byť pred týmto volaním funkčné, ak nie sú, skontrolujte prosím sekciu týkajúcu sa problému s malou pamäťou dockera.)
+4. `/elastic/synchronize-votes-es` (Synchronize votes in batches)
 
 ## Problém s Elastic search pamäťou
 V prípade chybovej hlášky spomínajúcej prekročenie limitu pamäte, je potrebné nastaviť premmennú vm.max_map_count

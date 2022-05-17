@@ -56,7 +56,10 @@ Simple hello message.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h4 id="root__get-responses">Responses</h4>
@@ -101,7 +104,10 @@ If server response is different than 200, response has status 500 with error fro
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "message": "string"
+}
 ```
 
 <h4 id="synchronize_synchronize_post-responses">Responses</h4>
@@ -145,7 +151,16 @@ Provide statistics of votes in gateway database. Count of synchronized and unsyn
 > 200 Response
 
 ```json
-null
+{
+  "status": "string",
+  "last_synchronization": null,
+  "last_success_synchronization": null,
+  "statistics": {
+    "all_count": 0,
+    "syncronized_count": 0,
+    "unsyncronized_count": 0
+  }
+}
 ```
 
 <h4 id="statistics_statistics_post-responses">Responses</h4>
@@ -189,7 +204,9 @@ Insert 10 unsynced dummy votes into gataway local gatabase.
 > 200 Response
 
 ```json
-null
+{
+  "status": "string"
+}
 ```
 
 <h4 id="seed_seed_post-responses">Responses</h4>
@@ -233,7 +250,10 @@ Get a batch of encrypted votes.
 > 200 Response
 
 ```json
-null
+{
+  "polling_place_id": 0,
+  "votes": []
+}
 ```
 
 <h4 id="test_encrypt_test_encrypt_get-responses">Responses</h4>
