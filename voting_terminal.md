@@ -2,7 +2,7 @@
 order: 101
 ---
 # Volebný terminál
-Volebný terminál je zariadenie s ktorým požívateľ bezprostredne interaguje. Pozostáva z frontendu, s ktorým interaguje používateľ a backendu, ktorý obsluhuje požiadavky frontendu a komunikuje s periférnymi zariadeniami a gatewayom.
+Volebný terminál je zariadenie s ktorým používateľ bezprostredne interaguje. Pozostáva z frontendu, s ktorým interaguje používateľ a backendu, ktorý obsluhuje požiadavky frontendu a komunikuje s periférnymi zariadeniami a gatewayom. Súčasťou volebného terminúla je aj čítačku tokenov.
 
 ## Architektúra
 
@@ -14,7 +14,11 @@ Z obrázku vidíme, že dotyková obrazovka s ktorou interaguje používateľ je
 
 ## Mikroslužba
 
-Ako už bolo spomenuté volebný terminál pozostáva z frontendu a backendu, pričom je každá z týchto služieb kontajnerizovaná pomocou dockeru a spolu sú cez docker compose orchestrované do jednej mikroslužby.
+Ako už bolo spomenuté volebný terminál pozostáva z frontendu a backendu, pričom je každá z týchto služieb kontajnerizovaná pomocou dockeru a spolu sú cez docker compose orchestrované do jednej mikroslužby. 
+
+## Čitačka tokenov
+
+Najmenšou mikroslužou, ktorá je taktiež súčasťou volebného terminálu je čitačka NFC zariadenia, ktorej jedinou úlohou je prijímať vstup z čítačky a posielať obsah na endpoint v backende.
 
 ## Frontend
 
