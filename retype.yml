@@ -5,9 +5,6 @@ branding:
   title: Electie - Future of Voting
   label: Docs
 links:
-- text: Web page
-  link: https://team17-21.studenti.fiit.stuba.sk/
-  icon: globe
 - text: Github
   link: https://github.com/tp17-2021
   icon: mark-github
