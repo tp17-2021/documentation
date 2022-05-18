@@ -82,7 +82,7 @@ def create_pdf() -> None:
     with open("documentation.md", "w") as file:
         file.write(output)
 
-    os.system("pandoc --toc documentation.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
+    os.system("pandoc --pdf-engine=xelatex --toc documentation.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
     os.system("rm documentation.md")
 
 
