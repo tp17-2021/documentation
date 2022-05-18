@@ -63,6 +63,8 @@ def merge_documents() -> list:
             if filename == "technical_documentation/server/modules/database.md":
                 text = re.sub(r"### Databáza", "## Moduly\n### Databáza", text)
 
+            if filename in ["index.md", "technical_documentation/voting_terminal.md", "user_guide/voting_terminal.md"]:
+                text = "\\newpage\n" + text
 
             output += text
 

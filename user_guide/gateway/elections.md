@@ -5,6 +5,7 @@ order: 100
 # Voľby
 
 Po kliknutí na tlačidlo "Voľby" na domovskej stránke je používateľ presmerovaný na podstránku, kde môže spravovať priebeh volieb.
+
 ![](/assets/images/user_guide/gateway/elections_off.png)
 
 Po kliknutí na tlačidlo "Spustiť voľby" na domovskej stránke sa spustia voľby vo volebnej miestnosti, čo znamená umožnenie propojenia volebných terminálov ku gateway-u. Po spustení volieb sa zapíše do histórie nová udalosť.
