@@ -372,7 +372,7 @@ print(r.json())
 ```json
 {
   "filter_by": "region_name",
-  "filter_value": "Presovsky kraj",
+  "filter_value": "Prešovský kraj",
 }
 ```
 

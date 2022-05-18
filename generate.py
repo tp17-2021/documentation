@@ -27,6 +27,7 @@ def find_links(text):
     for link in links:
         link = link.split()[0][1:]
         new_link = "".join(link.split("/"))
+        # print(new_link)
         text = re.sub(rf"/{link}", new_link, text)
         os.system(f"cp {link} {new_link}")
         links_to_detele.append(new_link)
@@ -43,13 +44,27 @@ def merge_documents() -> list:
             text = file.read() + "\n"
             text, links = find_links(text)
             text = insert_code(text)
+
             links_to_detele.extend(links)
             
             if "/" in filename:
+                if "modules" in filename:
+                    count = filename.count("/")-1
+                else:
+                    count = filename.count("/")-1
+
+                depth = count * "#"
                 headers = re.findall(r"^#.*", text, flags=re.MULTILINE)
                 for header in headers:
-                    new_header = f"#{header}"
+                    new_header = f"{depth}{header}"
                     text = re.sub(header, new_header, text)
+
+            # if filename == "technical_documentation/voting_terminal.md":
+            #     text = re.sub(r"## Volebný terminál", "# Technická dokumentácia\n## Volebný terminál", text)
+
+            if filename == "technical_documentation/server/modules/database.md":
+                text = re.sub(r"### Databáza", "## Moduly\n### Databáza", text)
+
 
             output += text
 
@@ -74,7 +89,7 @@ def create_pdf() -> None:
         text = file.read()
         headers = re.findall(r"^#.*", text, flags=re.MULTILINE)
         for header in headers:
-            if header.count("#") == 4:
+            if header.count("#") >= 4:
                 new_header = re.sub(r"\d.", "", header)
                 text = re.sub(header, new_header, text)
         output = text
@@ -83,7 +98,7 @@ def create_pdf() -> None:
         file.write(output)
 
     os.system("pandoc --pdf-engine=xelatex --toc documentation.md -V geometry=margin=30mm --listings -H listings-setup.tex --css style.css -o documentation.pdf")
-    os.system("rm documentation.md")
+    # os.system("rm documentation.md")
 
 
 def delete_links(links) -> None:

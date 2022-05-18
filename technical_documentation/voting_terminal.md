@@ -107,7 +107,7 @@ Tento súbor obsahuje triedu, ktorá predstavuje špecifikáciu volebného líst
 
 *   `__init__(data: dict)` je metóda, ktorá uloži zvolený hlas do triedy, je konštruktorom triedy
 
-## API
+## Popis API
 
 ### hello__get
 
@@ -341,7 +341,7 @@ null
 This operation does not require authentication
 </aside>
 
-## API Schemas
+## Schémy API
 
 <h2 id="tocS_HTTPValidationError">HTTPValidationError</h2>
 <!-- backwards compatibility -->
@@ -429,9 +429,9 @@ VotePartial
 
 
 
-# Dátová štruktúra
+## Dátová štruktúra
 
-## Štruktúra hlasu odoslaného z frontendu
+### Štruktúra hlasu odoslaného z frontendu
 
 Po odvolení sa odošle z frontendu hlas na backend v nasledujúcom formáte:
 
@@ -448,7 +448,7 @@ VotePartial:
           maxItems: 5
 ```
 
-## Štruktúra hlasu spracovaného pred tlačou
+### Štruktúra hlasu spracovaného pred tlačou
 Na backende sa spracuje daný hlas vo forme slovníka. Pred tlačou je hlas transformovaný do inej podoby vďaka configuračnému súboru pre celé voľby, pričom sa *party_id* z hlasu páruje ku *_id* pre stranu v konfiguračnom súbore. Vďaka tomuto napárovaniu sa vytiahne z kofiguračného súboru meno volenej strany. Rovnakým spôsobom sa vytiahne pre každý prvok z poľa *candidate_ids* meno kandidáta. Výsledná dátová štruktúra ktorá sa posiela do funkcie na tvorbu PDF pred tlačou vyzerá nasledovne:
 
 ```json
@@ -462,7 +462,7 @@ Na backende sa spracuje daný hlas vo forme slovníka. Pred tlačou je hlas tran
 }
 ```
 
-## Štruktúra hlasu odoslaného na uloženie na gateway
+### Štruktúra hlasu odoslaného na uloženie na gateway
 Súčasťou životného cyklu hlasu je aj odoslanie a uloženie na gateway-i. Formát finálneho hlasu odoslaného a uloženého na gateway je nasledovný:
 
 ```yaml

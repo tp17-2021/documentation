@@ -616,7 +616,7 @@ Generate commission paper in pdf format encoded in base64 and store it into data
     }
   ],
   "president": {
-    "name": "Samo Kiwi",
+    "name": "Samo Čerešňa",
     "agree": true
   }
 }
@@ -827,7 +827,7 @@ Body_register_vt_register_vt_post
     }
   ],
   "president": {
-    "name": "Samo Kiwi",
+    "name": "Samo Čerešňa",
     "agree": true
   }
 
