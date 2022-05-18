@@ -3,6 +3,7 @@
 Služba zodpovedná za udržiavanie aktuálneho stavu gateway-u.
 
 Udržuje tieto stavy:
+
 - `state_election` - stav volieb
 - `state_write` - stav zapisovačky
 - `state_register_terminals` - stav registrácie terminálov
