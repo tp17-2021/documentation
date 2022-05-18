@@ -54,7 +54,7 @@ Komunikácia s tlačiarňou je implementovaná cez knižnicu *CUPS*, ktorá bola
 
 #### Komunikácia s NFC čítačkou
 
-TODO
+NFC čítačka je HID zariadenie nad USB protokolom, teda funguje podobne ako klávesnica. Čítačka po priložení Mifare 1k tagu posiela scan kódy stlačení kláves, ktoré bolo potrebné prekonvertovať na ASCII znaky a nadpojiť na backend.
 
 ### Definované metódy
 
