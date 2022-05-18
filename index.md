@@ -1,4 +1,8 @@
-# Electie - Future of voting - Všeobecný pohľad
+---
+order: 170
+---
+
+# Všeobecný pohľad
 
 Súčasný systém volieb čelí problémom ako pomalé manuálne sčítanie hlasov, vysoké organizačné náklady, je náchylný na chyby spôsobené ľudským faktorom a občas chýba dôvera širokej verejnosti. Digitalizované volebné systémy by výrazne znížili náklady na voľby, čas potrebný na finalizáciu výsledkov, spotrebu papiera a eliminovali ľudský vstup do sčítania hlasov. Preto náš tím Electie prichádza s inovatívnou vízou pre elektronizáciu volebného procesu. Hlasovacie hárky sme nahradili dotykovými obrazovkami, vďaka čomu je možné hlasy zbierať a sčítavať automatizovane.
 

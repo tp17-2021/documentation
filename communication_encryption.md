@@ -1,3 +1,7 @@
+---
+order: 160
+---
+
 # Bezpečnosť a šifrovanie
 
 Bezpečnosť je vo voľbách, najmä v elektronických, prakticky najdôležitejším prvkom. Porušenie integrity volieb môže viesť k zmene výsledkov a v dôsledku toho k zvoleniu nesprávnych kandidátov. Takéto bezpečnostné incidenty by spravili riešenie prakticky nepoužiteľným a reputačne by zrujnovali jeho tvorcov. Preto je potrebné dostatočne dbať na bezpečnosť.
