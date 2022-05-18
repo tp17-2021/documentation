@@ -11,7 +11,7 @@ Aktivovaný a zapísaný token je označený ako `{"active": true}` a `{"written
 Token je považovaný ako platný iba ak je aktívny (`{"active": true}`).
 
 ## Komunikácia s frontendom
-Token manager komunikuje s frontendovou aplikáciou pomocou websocketov. Používateľa informuje o stave zapisovačky o úspešnom alebo neúspešnom zapísaní tokenu alebo o možnosti nahrávania ďalšieho tokenu. Vo websockete sa posiela udalosť `writer_status`, ktorý nadobúda hodnoty  `off`, `idle`, `success`, `error`.
+Token manager komunikuje s frontendovou aplikáciou pomocou websocketov. Používateľa informuje o stave zapisovačky, o úspešnom alebo neúspešnom zapísaní tokenu alebo o možnosti nahrávania ďalšieho tokenu. Vo websockete sa posiela udalosť `writer_status`, ktorý nadobúda hodnoty  `off`, `idle`, `success`, `error`.
 
 ## Popis API
 
@@ -37,7 +37,7 @@ print(r.json())
 
 *Root*
 
-Simple hello message. 
+Simple hello message.
 
 > Example responses
 
@@ -180,7 +180,7 @@ print(r.json())
 
 *Delete Unwritten*
 
-Delete unwritten NFC tokens from database. 
+Delete unwritten NFC tokens from database.
 
 > Body parameter
 
@@ -305,7 +305,7 @@ print(r.json())
 
 *Create Token*
 
-Generates new token and returns it. 
+Generates new token and returns it.
 
 > Example responses
 

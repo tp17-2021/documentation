@@ -1,15 +1,15 @@
 # Synchronization service
 
 Služba je zodpovedná za sychronizáciu hlasov medzi gateway-om a serverom. Služba je implementovaná ako REST API v knižnici
-[Fast API](https://fastapi.tiangolo.com/).
+[FastAPI](https://fastapi.tiangolo.com/).
 
-Služba pracuje z hlasmi v lokálnej Mongo databáze, ktoré boli vložené pomocou [Voting service](voting_service.md). Hlasy sa synchronizujú po dávkach (prednastavená hodnota je 10) a po zaširovaní sa posielajú pomocou HTTP požiadavky na endpoint [servera](../server/modules/voting.md), ktorý ich zvaliduje. Synchronizácia prebehne úspešne iba ak sú všetky hlasy v poriadku prijaté. Úspešne synchronizované hlasy označí ako `{"synchronized": true}`.
+Služba pracuje s hlasmi v lokálnej Mongo databáze, ktoré boli vložené pomocou [Voting service](voting_service.md). Hlasy sa synchronizujú po dávkach (prednastavená hodnota je 10) a po zašifrovaní sa posielajú pomocou HTTP požiadavky na endpoint [servera](../server/modules/voting.md), ktorý ich zvaliduje. Synchronizácia prebehne úspešne iba ak sú všetky hlasy v poriadku prijaté. Úspešne synchronizované hlasy označí ako `{"synchronized": true}`.
 
-Synchronizácia prebieha na pozadí v intervale každú minútu (implementované pomocou [Fast API Utils Repeated Tasks](https://fastapi-utils.davidmontague.xyz/user-guide/repeated-tasks/)). Dá sa však spustiť aj manuálne pomocou endpointu `POST /api/synchronize`, ktorý je popísaný nižšie.
+Synchronizácia prebieha na pozadí každú minútu (implementované pomocou [FastAPI Utils Repeated Tasks](https://fastapi-utils.davidmontague.xyz/user-guide/repeated-tasks/)). Dá sa však spustiť aj manuálne pomocou endpointu `POST /api/synchronize`, ktorý je popísaný nižšie.
 
 ## Štruktúra posielaných hlasov
 
-Hlasy sú posielané v HTTP požiadavke, ktorú tvorí json s id volebnej miestnosti a hlasmi, ktoré sú zašifrované ako pole zašifrovaných hlasov pomocou knižnice [*rsaelectie*](../communication_encryption), funkcie `encrypt_vote`.
+Hlasy sú posielané v HTTP požiadavke, ktorú tvorí JSON s ID volebnej miestnosti a hlasmi, ktoré sú zašifrované ako pole zašifrovaných hlasov pomocou knižnice [*rsaelectie*](../communication_encryption), funkcie `encrypt_vote`.
 
 ``` json
   {
@@ -49,7 +49,7 @@ print(r.json())
 
 *Root*
 
-Simple hello message. 
+Simple hello message.
 
 > Example responses
 
@@ -197,7 +197,7 @@ print(r.json())
 
 *Seed*
 
-Insert 10 unsynced dummy votes into gataway local gatabase. 
+Insert 10 unsynced dummy votes into gataway local gatabase.
 
 > Example responses
 
@@ -243,7 +243,7 @@ print(r.json())
 
 *Test Encrypt*
 
-Get a batch of encrypted votes. 
+Get a batch of encrypted votes.
 
 > Example responses
 

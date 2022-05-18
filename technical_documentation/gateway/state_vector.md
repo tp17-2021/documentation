@@ -6,8 +6,8 @@ Udržuje tieto stavy:
 - `state_election` - stav volieb
 - `state_write` - stav zapisovačky
 - `state_register_terminals` - stav registrácie terminálov
-- `office_id` - id volebnej miestnosti
-- `pin` - pin kód k GUI aplikácii na gataway-i
+- `office_id` - ID volebnej miestnosti
+- `pin` - PIN kód k GUI aplikácii na gataway-i
 - `server_key` - verejný kľúč servera
 - `server_address` - adresa servera
 
@@ -40,7 +40,7 @@ print(r.json())
 
 *Hello*
 
-Sample testing endpoint 
+Sample testing endpoint
 
 > Example responses
 
@@ -86,7 +86,7 @@ print(r.json())
 
 *Get State Election*
 
-Get election state string 0 or 1 
+Get election state string 0 or 1
 
 > Example responses
 
@@ -131,7 +131,7 @@ print(r.json())
 
 *Set State Election*
 
-Set election state string 0 or 1 
+Set election state string 0 or 1
 
 > Body parameter
 
@@ -188,7 +188,7 @@ print(r.json())
 
 *Get State Write*
 
-Get write state string 0 or 1 
+Get write state string 0 or 1
 
 > Example responses
 
@@ -233,7 +233,7 @@ print(r.json())
 
 *Set State Write*
 
-Set write state string 0 or 1 
+Set write state string 0 or 1
 
 > Body parameter
 
@@ -290,7 +290,7 @@ print(r.json())
 
 *State Register Terminals*
 
-Get terminals registration state string 0 or 1 
+Get terminals registration state string 0 or 1
 
 > Example responses
 
@@ -335,7 +335,7 @@ print(r.json())
 
 *Set State Register Terminals*
 
-Set register terminals state string 0 or 1 
+Set register terminals state string 0 or 1
 
 > Body parameter
 
@@ -392,7 +392,7 @@ print(r.json())
 
 *Get Office Id*
 
-Get office id 
+Get office id
 
 > Example responses
 
@@ -436,7 +436,7 @@ print(r.json())
 
 *Get Pin*
 
-Get pin 
+Get pin
 
 > Example responses
 
@@ -480,7 +480,7 @@ print(r.json())
 
 *Get Server Key*
 
-Get server key 
+Get server key
 
 > Example responses
 
@@ -524,7 +524,7 @@ print(r.json())
 
 *Get Server Address*
 
-Get server address 
+Get server address
 
 > Example responses
 

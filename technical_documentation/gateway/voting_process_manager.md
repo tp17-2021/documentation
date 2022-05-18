@@ -3,11 +3,11 @@
 Hlavná služba na gateway-i zodpovedná za spustenie a zastavenie volieb, registráciu volebných terminálov, poskytuje informáciu o stave pripojených terminálov a udalosti o spustení a zastavení volieb. Rovnako zabezpečuje generovanie zápisnice a odoslanie zápisnice na server.
 
 ## Registrácia volebného terminálu
-Pri spustení volebného terminálu sa terminál dopytuje na endpoint `/register-vt` kedy sa pri spustenej registrácii vymení verejný kľúč gataway-a, aby mohla prebiehať šifrovaná komunikácia medzi volebným terminálom a gateway-om. Ak registrácia nie je spustená vráti sa status `400`.
+Pri spustení volebného terminálu sa terminál dopytuje na endpoint `/register-vt` kedy sa pri spustenej registrácii vymení verejný kľúč gataway-a, aby mohla prebiehať šifrovaná komunikácia medzi volebným terminálom a gateway-om. Ak registrácia nie je spustená, vráti sa status `400`.
 
 
 ## Komunikácia medzi volebným terminálom
-Táto služba komunikuje so všetkými registrovanými volebnými terminálmi pomocou websocketov. Vo websockete sa posiela udalosť `actual_state`, ktorý obsahuje aktuálny stav volieb volebným terminálom. Rovnako aj volebné terminály notifikujú gateway o ich aktuálnom stave udalosťou `vt_status`.
+Táto služba komunikuje so všetkými registrovanými volebnými terminálmi pomocou websocketov. Vo websockete sa posiela udalosť `actual_state`, ktorá obsahuje aktuálny stav volieb volebným terminálom. Rovnako aj volebné terminály notifikujú gateway o ich aktuálnom stave udalosťou `vt_status`.
 
 ## Popis API
 
@@ -33,7 +33,7 @@ print(r.json())
 
 *Root*
 
-Simple hello message. 
+Simple hello message.
 
 > Example responses
 
@@ -80,7 +80,7 @@ print(r.json())
 
 *Election Config*
 
-Returns necessary config fields for gateway from config. 
+Returns necessary config fields for gateway from config.
 
 > Example responses
 
@@ -180,7 +180,7 @@ print(r.json())
 
 *Login For Access Token*
 
-Log in user using username and password. 
+Log in user using username and password.
 
 > Body parameter
 
