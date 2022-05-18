@@ -13,3 +13,6 @@ links:
   icon: mark-github
 footer:
   copyright: "&copy; Copyright {{ 2022 }}. All rights reserved."
+edit:
+  repo: "https://github.com/tp17-2021/documentation/"
+  branch: development
