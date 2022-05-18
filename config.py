@@ -1,6 +1,7 @@
 FILENAMES = [
-    "technical_documentation/gateway.md",
-    "technical_documentation/gateway/state_vector.md",
+    "technical_documentation/voting_terminal.md",
+    # "technical_documentation/voting_terminal/installation.md",
+    # "technical_documentation/gateway/state_vector.md",
     # "gateway/synchronization_service.md",
     # "gateway/token_manager.md",
     # "gateway/token_writer.md",
