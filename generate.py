@@ -48,7 +48,7 @@ def merge_documents() -> list:
             links_to_detele.extend(links)
             
             if "/" in filename:
-                if "modules" in filename:
+                if "user_guide" in filename:
                     count = filename.count("/")-1
                 else:
                     count = filename.count("/")-1
@@ -57,10 +57,8 @@ def merge_documents() -> list:
                 headers = re.findall(r"^#.*", text, flags=re.MULTILINE)
                 for header in headers:
                     new_header = f"{depth}{header}"
+                    # print(header, new_header)
                     text = re.sub(header, new_header, text)
-
-            # if filename == "technical_documentation/voting_terminal.md":
-            #     text = re.sub(r"## Volebný terminál", "# Technická dokumentácia\n## Volebný terminál", text)
 
             if filename == "technical_documentation/server/modules/database.md":
                 text = re.sub(r"### Databáza", "## Moduly\n### Databáza", text)
