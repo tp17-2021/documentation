@@ -1,10 +1,10 @@
 # Výsledky a štatistiky
 
-Výsledky volieb sa rátajú na serveri pomocou dát získaných z Elastic Searchu a funkcie `calcualte_winning_parties_and_seats`.
+Výsledky volieb sa rátajú na serveri pomocou dát získaných z ElasticSearch-u a funkcie `calcualte_winning_parties_and_seats`.
 
-Na zobrazenie výsledkov ponúkame viaceré koncové body ktoré výsledky vrátia s inou agregáciou alebo vráti len ich časť aby odpoveď nebola príliš veľká.
+Na zobrazenie výsledkov ponúkame viaceré endpointy, ktoré výsledky vrátia s inou agregáciou alebo vrátia len ich časť aby odpoveď nebola príliš veľká.
 
-## Dostupné koncové body:
+## Dostupné endpointy:
 - `/elastic/get-parties-results`
     - získanie výsledkov politických strán bez kandidátov
 - `/elastic/get-party-candidate-results`
@@ -27,8 +27,8 @@ def calcualte_winning_parties_and_seats(transformed_data):
 ```
 
 Algoritmus výpočtu:
-1. Prepočítať poečt získaných hlasov pre všetky strany a získať tie ktoré majú nad 5%.
-2. Počet republikové číslo (počet hlasov, potrebných pre získanie jedného mandátu, ráta s pomocou čísla 151)
+1. Prepočítať počet získaných hlasov pre všetky strany a získať tie, ktoré majú nad 5%.
+2. Počet republikové číslo (počet hlasov, potrebných pre získanie jedného mandátu, ráta s pomocou čísla 151).
 3. Pomocou republikového čísla určiť na koľko kresiel má strana nárok a uchovať si počet po celočíselnom delení.
 4. Ak neboli rozdané všetky kreslá, tak sa doplnia postupne stranám v poradí podľa zostatku po celočíselonom delení republikovým číslom.
 
@@ -447,5 +447,5 @@ null
 
 <aside class="success">
 This operation does not require authentication
-</aside>    
+</aside>
 

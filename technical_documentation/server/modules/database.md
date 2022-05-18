@@ -3,7 +3,7 @@ order: 199
 ---
 
 # Databáza
-Server používa na ukladanie dát dokumentovú databázu [MongoDB](https://www.mongodb.com/). Aj keď je do MongoDB vkladať dáta s rôznymi atribútmi, používame modely jednoitlivých dátových entít, ktoré špecifikujú štruktúru objektu a definujú typy jeho atribútov. Pracujeme s nasledujúcimi kolekciami:
+Server používa na ukladanie dát dokumentovú databázu [MongoDB](https://www.mongodb.com/). Aj keď je do MongoDB možné vkladať dáta s rôznymi atribútmi, používame modely jednotlivých dátových entít, ktoré špecifikujú štruktúru objektu a definujú typy jeho atribútov. Pracujeme s nasledujúcimi kolekciami:
 - votes
 - parties
 - candidates
@@ -24,7 +24,7 @@ class Vote(BaseModel):
 polling_place_id: int
 synchronized: bool
 ```
-Atribút polling_place_id slúži na spojenie hlasu s miestnosťou, v ktorej bol zvolený a atribút synchronized, ktorý indikuje, či bol daný hlas už zandexovaný do Elastic Searchu.
+Atribút polling_place_id slúži na spojenie hlasu s miestnosťou, v ktorej bol zvolený atribút synchronized, ktorý indikuje, či bol daný hlas už zandexovaný do ElasticSearch-u.
 
 
 
@@ -41,7 +41,7 @@ class Party(BaseModel):
     color: str
     candidates: List[Candidate] = []
 ```
-Dátová štruktúra politickej strany obsahuje základné údaje ako názov, skratka a číslo a doplnkové údaje ako farba a logo, ktoré sa používajú v štatistickej aplikácii. Ďalej strana obsahuje zoznam kadidátov, ktorý sú reprezentovaný vlastným modelom.
+Dátová štruktúra politickej strany obsahuje základné údaje ako názov, skratka, číslo a doplnkové údaje ako farba a logo, ktoré sa používajú v štatistickej aplikácii. Ďalej strana obsahuje zoznam kadidátov, ktorí sú reprezentovaný vlastným modelom.
 
 Štruktúra volebnej miestnosti:
 ```python
@@ -58,7 +58,7 @@ class PollingPlace(BaseModel):
     polling_place_number: int
     registered_voters_count: int
 ```
-Dátová štruktúra volebnej miestnosti obsahuje ifnormácie o územných celkoch, v ktorých sa daná miestnosť nachádza. Tieto údaje budú následne použité na prepočítavanie výslekov pre rôzne lokality (obce, okresy a kraje).
+Dátová štruktúra volebnej miestnosti obsahuje informácie o územných celkoch, v ktorých sa daná miestnosť nachádza. Tieto údaje budú následne použité na prepočítavanie výslekov pre rôzne lokality (obce, okresy a kraje).
 
 Štruktúra kandidáta:
 ```python
@@ -73,7 +73,7 @@ class Candidate(BaseModel):
     occupation: str
     residence: str
 ```
-Dátová štruktúra kandidáta obsahuje základné údaje o kandidátovy, ktoré sú použité na zobrazovanie výsledkov a obsahuje taktiež prepojenie na politickú stranu, ktorej je súčasťou.
+Dátová štruktúra kandidáta obsahuje základné údaje o kandidátovi, ktoré sú použité na zobrazovanie výsledkov a obsahuje taktiež prepojenie na politickú stranu, ktorej je súčasťou.
 
 Štruktúra kľúčového páru:
 ```python
@@ -85,7 +85,7 @@ class KeyPair(BaseModel):
     g_private_key_pem: str
     g_public_key_pem: str
 ```
-Kľúčový pár je špecifický pre každú volebnú meistnosť a jeho privátnym kľúčom je dešifrovaná iba kominikácia, ktorá prichádza z tejto volebnej miestnosti. Tento krok zvyšuje bezpečnosť komunikácie.
+Kľúčový pár je špecifický pre každú volebnú miestnosť a jeho privátnym kľúčom je dešifrovaná iba kominikácia, ktorá prichádza z tejto volebnej miestnosti. Tento krok zvyšuje bezpečnosť komunikácie.
 
 
 ## Popis API
